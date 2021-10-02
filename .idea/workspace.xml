@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2a495c6-4819-467b-9caf-937a7bae6bda" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Impact Label Reversed.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -117,7 +118,7 @@
       <workItem from="1632169101351" duration="1256000" />
       <workItem from="1632397874093" duration="6732000" />
       <workItem from="1632554449515" duration="33081000" />
-      <workItem from="1632850042908" duration="30559000" />
+      <workItem from="1632850042908" duration="31154000" />
     </task>
     <servers />
   </component>
