@@ -18,10 +18,10 @@ html {
 }
 
 a {
-  color: #202020;
+  color: #000000;
   text-decoration: none;
   padding-bottom: 1px;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid #000000;
   font-size: 0.9rem;
 }
 
