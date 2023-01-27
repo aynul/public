@@ -134,7 +134,7 @@
       <workItem from="1666188428057" duration="2188000" />
       <workItem from="1672781316954" duration="8262000" />
       <workItem from="1673709761875" duration="3104000" />
-      <workItem from="1674676856760" duration="230000" />
+      <workItem from="1674676856760" duration="689000" />
     </task>
     <servers />
   </component>
@@ -142,14 +142,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633016362462">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1674775299361">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="104" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1633016362462" />
-    <state x="305" y="145" width="670" height="655" key="search.everywhere.popup" timestamp="1632490191087">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1631318616834" />
-    <state x="305" y="145" width="670" height="655" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1632490191087" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1674775299361" />
   </component>
 </project>
