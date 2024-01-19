@@ -18,8 +18,8 @@
   <script type="text/javascript">
       window.onload = function(){
           var songs = ['6EYaL5ach3SUCQSebLMops'];
-          var idx = Math.floor(Math.random() * songs.length);
-          document.getElementById('spotify').src = "https://open.spotify.com/embed/track/${song_id}"
+          var song_index = Math.floor(Math.random() * songs.length);
+          document.getElementById('spotify').src = "https://open.spotify.com/embed/track/"+ songs[song_index]
         };
   </script>
 </head>
@@ -57,10 +57,7 @@
       </ul>
       <h2>Get in touch</h2>
       <ol style="padding: 0px; margin:0px; font-size: 0.9rem;line-height: 1.6;">
-          <li><a href='https://www.twitter.com/aynulhabib'>Twitter</a></li>
-          <li><a href='https://www.linkedin.com/in/aynul/'>LinkedIn</a></li>
-          <li><a href='https://www.facebook.com/aynul.habib'>Facebook</a></li>
-          <li><a href='mailto:habibaynul@gmail.com'>Email</a></li>
+          habibaynul@gmail.com
       </ol>
     </div>
 
