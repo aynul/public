@@ -14,6 +14,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+
+  <script type="text/javascript">
+      window.onload = function(){
+          var songs = ['6EYaL5ach3SUCQSebLMops'];
+          var idx = Math.floor(Math.random() * songs.length);
+          var song_id = songs[idx];
+        };
+  </script>
 </head>
 
 <body style='font-family: Helvetica'>
@@ -28,7 +36,7 @@
     <div style='padding-left: 30px'>
       <h1 class='headline' style='font-size: 1.1rem;font-family: DM Serif Text serif;'>AYNUL HABIB</h1>
       <hr/>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6EYaL5ach3SUCQSebLMops?utm_source=generator" width="300px" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${song_id}" width="300px" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       <h2>Missions</h2>
       <ul>
         <li>Make one good friend from every country.</li>
