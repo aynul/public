@@ -15,6 +15,16 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
+  <style>
+    #countryList {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 0; /* Remove default padding */
+    }
+  </style>
+
   <script type="text/javascript">
     function iframeDidLoad() {
       loadFlags();  
