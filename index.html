@@ -36,14 +36,13 @@
   </style>
 
   <script type="text/javascript">
-    function iframeDidLoad() {
-      loadFlags();  
-    }
-      window.onload = function(){
-          var songs = ['7gbSDq9luQx6yVl7HyJGIW','6EYaL5ach3SUCQSebLMops', '5yp4U4b172RqYuUexORgVX', '5TMLavqGRKNxgzMBrVpC9R'];
-          var song_index = Math.floor(Math.random() * songs.length);
-          document.getElementById('spotify').src = "https://open.spotify.com/embed/track/"+ songs[song_index]
-        };
+
+    window.onload = function(){
+       loadFlags();  
+        var songs = ['7gbSDq9luQx6yVl7HyJGIW','6EYaL5ach3SUCQSebLMops', '5yp4U4b172RqYuUexORgVX', '5TMLavqGRKNxgzMBrVpC9R'];
+        var song_index = Math.floor(Math.random() * songs.length);
+        document.getElementById('spotify').src = "https://open.spotify.com/embed/track/"+ songs[song_index]
+      };
 
     function appendCountry(countryCode) {
       // Create a new list item
@@ -64,7 +63,7 @@
   }
 
   function loadFlags() {
-    var countriesVisited = ['pt', 'es', 'fr', 'gb', 'cr', 'bd', 'co', 'ar', 'uy', 'se', 'ba', 'si', 'it', 'at', 'de', 'hu', 'mx', 'ca', 'do', 'dk'];
+    var countriesVisited = ['us', 'pt', 'es', 'fr', 'gb', 'cr', 'bd', 'co', 'ar', 'uy', 'se', 'ba', 'si', 'it', 'at', 'de', 'hu', 'mx', 'ca', 'do', 'dk'];
 
     for (var i=1;i<= countriesVisited.length; i++) {
       appendCountry(countriesVisited[i]);
