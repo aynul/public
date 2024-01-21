@@ -17,16 +17,41 @@
 
   <script type="text/javascript">
     function iframeDidLoad() {
-      for (var i=1;i<=10; i++) {
-        console.log('omg, ur such a hacker. my email is habibaynul@gmail.com');
-      }
-        
+      loadFlags();  
     }
       window.onload = function(){
           var songs = ['7gbSDq9luQx6yVl7HyJGIW','6EYaL5ach3SUCQSebLMops', '5yp4U4b172RqYuUexORgVX', '5TMLavqGRKNxgzMBrVpC9R'];
           var song_index = Math.floor(Math.random() * songs.length);
           document.getElementById('spotify').src = "https://open.spotify.com/embed/track/"+ songs[song_index]
         };
+
+    function appendCountry(countryCode) {
+      // Create a new list item
+      var newItem = document.createElement("li");
+  
+      // Create an image element
+      var img = document.createElement("img");
+      img.src = `https://flagcdn.com/16x12/${countryCode}.png`;
+      img.srcset = `https://flagcdn.com/32x24/${countryCode}.png 2x,
+        https://flagcdn.com/48x36/${countryCode}.png 3x`;
+      img.width = 16;
+      img.height = 12;
+  
+      // Append the image to the list item
+      newItem.appendChild(img);
+  
+      // Append the list item to the existing list
+      document.getElementById("countryList").appendChild(newItem);
+  }
+
+  function loadFlags() {
+    var countriesVisited = ['PT', 'ES', 'FR', 'GB', 'GB', 'CR', 'BD', 'CO', 'AR', 'UY', 'SE', 'BA', 'SI', 'IT', 'AT', 'DE', 'HU', 'MX', 'CA', 'DO', 'DK', 'BG'];
+    for (var i=1;i<= countries.length; i++) {
+      appendCountry(countries[i]);
+    }
+  }
+
+  
   </script>
 </head>
 
@@ -47,6 +72,10 @@
       <ul>
         <li>Contribute to a globally recognized product.</li>
       </ul>
+
+      <ul id="countryList" style="list-style-type: none;">
+        <!-- Existing list items, if any -->
+      </ul>
     
       <h2>Completed Thru Hikes</h2>
       <ul>
@@ -60,6 +89,7 @@
         <li><a href="https://www.levelshealth.com/blog/choosing-the-right-diet-should-not-feel-like-russian-roulette-an-interview-with-aynul-habib" target="_blank">Choosing the Right Diet Should Not Feel Like Russian Roulette: An Interview with Aynul Habib</a></li>
       </ul>
       <h2>Get in touch</h2>
+      habibaynul@gmail.com
       <ol style="padding: 0px; margin:0px; font-size: 0.9rem;line-height: 1.6;">
           <li><a href='https://www.twitter.com/aynulhabib'>Twitter</a></li>
           <li><a href='https://www.linkedin.com/in/aynul/'>LinkedIn</a></li>
