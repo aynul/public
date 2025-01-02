@@ -32,6 +32,28 @@
       width: 20;
     }
 
+    body {
+      background: #f0f0f0;
+    }
+
+    .countryFlag {
+      --r: 2px; /* control the radius */
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center; 
+      height: 25px;
+      aspect-ratio: 1.0;
+      padding: calc(2*var(--r));
+      background: #ffffff;
+      filter: drop-shadow(0 0 0.75rem crimson);
+      mask: 
+        radial-gradient(var(--r),#0000 97%,#000) round 
+         calc(-1.5*var(--r)) calc(-1.5*var(--r))/calc(3*var(--r)) calc(3*var(--r)), 
+        linear-gradient(#000 0 0) no-repeat 50%/calc(100% - 3*var(--r)) calc(100% - 3*var(--r));
+    }
+
+    
+
     
   </style>
 
