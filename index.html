@@ -60,41 +60,52 @@
   </style>
 
   <script type="text/javascript">
+      function loadRandomTrack() {
+    const songs = [
+      '3AspYFTkJFk9lXyaa2xxjW',
+      '5ZKEXzA6Ba8e8YmtKWiLeC',
+      '3cLXrotzCjYCkN73PewALM',
+      '1Wrzhfa5bNlqvsnCztz190',
+      '7bp7QInQ5uIMzYjJqTtjVA',
+      '5mjYQaktjmjcMKcUIcqz4s',
+      '6EYaL5ach3SUCQSebLMops',
+      '5yp4U4b172RqYuUexORgVX',
+      '5TMLavqGRKNxgzMBrVpC9R',
+      '2hTx8adLNJBwhLsavI1Xvr',
+    ];
 
-    window.onload = function(){
-       loadFlags();  
-        var songs = ['3AspYFTkJFk9lXyaa2xxjW','5ZKEXzA6Ba8e8YmtKWiLeC','3cLXrotzCjYCkN73PewALM','1Wrzhfa5bNlqvsnCztz190','7bp7QInQ5uIMzYjJqTtjVA','5mjYQaktjmjcMKcUIcqz4s','6EYaL5ach3SUCQSebLMops', '5yp4U4b172RqYuUexORgVX', '5TMLavqGRKNxgzMBrVpC9R', '2hTx8adLNJBwhLsavI1Xvr'];
-        var song_index = Math.floor(Math.random() * songs.length);
-        document.getElementById('spotify').src = "https://open.spotify.com/embed/track/"+ songs[song_index]
-      };
-
-    function appendCountry(countryCode) {
-      // Create a new list item
-      var newItem = document.createElement("li");
-  
-      // Create an image element
-      var img = document.createElement("img");
-      img.src = `https://flagcdn.com/${countryCode}.svg`;
-      img.width = 16;
-      img.height = 12;
-      img.className = 'countryFlag'
-  
-      // Append the image to the list item
-      newItem.appendChild(img);
-  
-      // Append the list item to the existing list
-      document.getElementById("countryList").appendChild(newItem);
+    const trackId = songs[Math.floor(Math.random() * songs.length)];
+    document.getElementById('spotify').src =
+      `https://open.spotify.com/embed/track/${trackId}`;
   }
 
   function loadFlags() {
-    var countriesVisited = ['za','us', 'pt', 'es', 'fr', 'gb', 'cr', 'co', 'ar', 'uy', 'se', 'ba', 'si', 'it', 'at', 'de', 'hu', 'mx', 'ca', 'do', 'dk'];
+    const countriesVisited = [
+      'za', 'us', 'pt', 'es', 'fr', 'gb', 'cr', 'co', 'ar', 'uy',
+      'se', 'ba', 'si', 'it', 'at', 'de', 'hu', 'mx', 'ca', 'do', 'dk',
+    ];
+    const countryList = document.getElementById('countryList');
+    const countryNames = new Intl.DisplayNames(['en'], { type: 'region' });
 
-    for (var i=1;i<= countriesVisited.length; i++) {
-      appendCountry(countriesVisited[i]);
+    for (const countryCode of countriesVisited) {
+      const item = document.createElement('li');
+      const flag = document.createElement('img');
+
+      flag.src = `https://flagcdn.com/${countryCode}.svg`;
+      flag.alt = countryNames.of(countryCode.toUpperCase());
+      flag.width = 16;
+      flag.height = 12;
+      flag.className = 'countryFlag';
+
+      item.appendChild(flag);
+      countryList.appendChild(item);
     }
   }
 
-  
+  document.addEventListener('DOMContentLoaded', () => {
+    loadRandomTrack();
+    loadFlags();
+  });
   </script>
 </head>
 
@@ -110,7 +121,19 @@
     <div style='padding-left: 30px'>
       <h1 class='headline' style='font-size: 1.1rem;font-family: DM Serif Text serif;'>AYNUL HABIB</h1>
       <hr/>
-      <iframe id='spotify' onLoad="iframeDidLoad();" style="padding-top: 30px; border-radius:12px" src="" width="300px" height="125" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+      <iframe
+        id="spotify"
+        title="Spotify player"
+        onload="iframeDidLoad()"
+        style="padding-top: 30px; border-radius: 12px; border: 0"
+        width="300"
+        height="125"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+      
       <h3>Mission</h3>
       <ul>
         <li>Contribute to a globally recognized product.</li>
